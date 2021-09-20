@@ -84,6 +84,11 @@ def list_directory():
         if file.endswith(".txt"):
             print("\n" + file + "\n")
 
+def reverse_dictionary(dict):
+
+    value_to_key = {value: key for key, value in dict.items()}
+    print(value_to_key)
+
 def main():
     menu = selection()
     while menu != '0':
@@ -109,6 +114,9 @@ def main():
             menu = selection()
         elif menu == '6':
             read_ratings()
+            menu = selection()
+        elif menu == '7':
+            reverse_dictionary(ratings_dictionary)
             menu = selection()
         else:
             menu = selection()
